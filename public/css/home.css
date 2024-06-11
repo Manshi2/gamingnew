@@ -1,0 +1,77 @@
+body{
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+h1{
+  font-size: 60px;
+}
+#ilogo{
+  color: #EB455F;
+}
+#textlogo{
+  font-size: 25px;
+}
+/* top */
+nav{
+  z-index: 1;
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+}
+.navbar-nav{
+  position: absolute;
+  top:10px;
+  right:0px;
+}
+.nav-item{
+  margin-right: 10px;
+}
+.row{
+  background-color:black;
+  color: white;
+}
+.col11, .col22{
+  background-color: black;
+  margin-top: 15%;
+}
+#topimg{
+  transform: rotate(0deg);
+  position: relative;
+  width: 65%;
+}
+/* bottom */
+#bottom{
+  text-align: center;
+  background-color: red;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+
+@media only screen and (max-width: 480px){
+  h1{
+    font-size: 30px;
+  }
+  .col11{
+    background-color: black;
+    margin-top: 0%;
+    margin-bottom: 3%;
+  }
+  .col22{
+    background-color: black;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  .nav-item{
+    margin: 4px;
+  }
+  .navbar-nav{
+    position: relative;
+    bottom:10px;
+    right:0px;
+  }
+  #topimg {
+  width: 100%;
+  }
+}

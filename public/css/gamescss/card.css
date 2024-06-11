@@ -1,0 +1,176 @@
+/* Variabes */
+/* Mixin's */
+
+body {
+  background: rgb(81,191,219);
+  background: radial-gradient(circle, rgba(81,191,219,1) 27%, rgba(27,75,88,1) 100%);
+font-family: 'Righteous', cursive;
+height: 100%;
+color: #fff;
+text-align: center;
+}
+h1, h2 {
+font-weight: 100;
+font-size: 2.6em;
+text-transform: uppercase;
+}
+h3 {
+font-weight: 100;
+font-size: 1.4em;
+/* text-transform: uppercase; */
+}
+#seconds, #tens {
+font-size: 2em;
+}
+#semicolon{
+  font-size: 3em;
+}
+button {
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 10px;
+-khtml-border-radius: 5px;
+background: #82d2e5;
+color: #fff;
+border: solid 1px #fff;
+text-decoration: none;
+cursor: pointer;
+font-size: 1.5em;
+padding: 5px 10px;
+width: 100px;
+margin: 5px 10px;;
+outline: none;
+}
+button:hover {
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+background: #fff;
+border: solid 1px #fff;
+color: #82d2e5;
+}
+#container {
+width: 900px;
+margin: 10px auto;
+}
+#container:after {
+content: "";
+display: table;
+clear: both;
+}
+[data-view="card"] {                  /*  CARD SIZE*/
+transform: rotateY(180deg);
+width: 160px;
+height: 240px;
+border: solid 1px #d3cece;
+border-radius: 5px;
+float: left;
+margin: 10px;
+cursor: pointer;
+background: linear-gradient(135deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
+background-color: #f3f3f3;
+background-size: 64px 128px;
+}
+.flipped {
+transition: 0.6s;
+transform-style: preserve-3d;
+position: relative;
+transform: rotateY(0deg);
+}
+.reverse {
+transition: 0.6s;
+transform-style: preserve-3d;
+position: relative;
+transform: rotateY(180deg);
+}
+.correct {
+opacity: 0.5;
+cursor: default;
+transform-style: preserve-3d;
+position: relative;
+transform: rotateY(0deg);
+}
+/* Icons */
+.correct[data-item="sass"], .flipped[data-item="sass"] {
+background: url("/images/card_img/c1.jpg") left center no-repeat #fff;
+background-size: contain;
+}
+.correct[data-item="gulp"], .flipped[data-item="gulp"] {
+background: url("/images/card_img/c2.jpg") left center no-repeat #fff;
+background-size: contain;
+}
+.correct[data-item="grunt"], .flipped[data-item="grunt"] {
+background: url("/images/card_img/c3.jpg") left center no-repeat #fff;
+background-size: contain;
+}
+.correct[data-item="git"], .flipped[data-item="git"] {
+background: url("/images/card_img/c4.jpg") left center no-repeat #fff;
+background-size: contain;
+}
+.correct[data-item="css"], .flipped[data-item="css"] {
+background: url("/images/card_img/c5.jpg") left center no-repeat #fff;
+background-size: contain;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  #seconds,
+  #tens {
+    font-size: 1.5em;
+  }
+
+  #semicolon {
+    font-size: 2em;
+  }
+
+  button {
+    position: absolute;
+    top:60%;
+    right: 36.5%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 10px;
+  -khtml-border-radius: 5px;
+  background: #82d2e5;
+  color: #000;
+  border: solid 1px #000;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 5px;
+  width: 80px;
+  margin: 25px 10px;;
+  outline: none;
+  }
+  #container {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  [data-view="card"] {
+  transform: rotateY(180deg);
+  width: 50px;
+  height: 100px;
+  border: solid 1px #d3cece;
+  border-radius: 5px;
+  float: left;
+  margin: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, #f3f3f3 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px) 0 64px;
+  background-color: #f3f3f3;
+  background-size: 64px 128px;
+  }
+}
