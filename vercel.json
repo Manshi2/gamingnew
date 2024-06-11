@@ -1,25 +1,19 @@
 {
-    "name": "express-static-website",
     "version": 2,
-    "public": true,
     "builds": [
       {
-        "src": "home.js",
+        "src": "./home.js",
         "use": "@vercel/node"
-      },
-      {
-        "src": "public/**",
-        "use": "@vercel/static"
       }
     ],
     "routes": [
       {
-        "src": "/((?!.*\\.\\w+$).*)",
-        "dest": "/home.js"
-      },
-      {
-        "src": "/(.+\\.[a-z]+)$",
-        "dest": "/public/$1"
+        "src": "/(.*)",
+        "dest": "./home.js",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
       }
     ]
   }
