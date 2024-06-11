@@ -9,7 +9,8 @@ const _=require("lodash");
 var md5 = require('md5');
 
 //setting packages
-const app=express();
+const app = express(); 
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
@@ -306,6 +307,8 @@ process.on('SIGINT', function() {
   });
 });
 // Start the server
-app.listen(process.env.PORT || 5000, function() {
-  console.log("Server is running on port 5000");
-});
+// app.listen(process.env.PORT || 5000, function() {
+//   console.log("Server is running on port 5000");
+// });
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`); });
